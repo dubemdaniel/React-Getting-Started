@@ -31,7 +31,14 @@ function App() {
     <div className="center">
       <Header></Header>
       <ul id="concepts">
-        <Concept
+        {concepts.map((concept) => (
+          <Concept
+            title={concept.title}
+            image={concept.image}
+            description={concept.description}
+          />
+        ))}
+        {/* <Concept
           title={concepts[0].title}
           image={concepts[0].image}
           description={concepts[0].description}
@@ -45,7 +52,7 @@ function App() {
           title={concepts[2].title}
           image={concepts[2].image}
           description={concepts[2].description}
-        ></Concept>
+        ></Concept> */}
       </ul>
     </div>
   );
